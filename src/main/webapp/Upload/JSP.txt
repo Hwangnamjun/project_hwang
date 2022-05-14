@@ -1,0 +1,454 @@
+JSP - 홍진숙
+개발 - 응용SW개발, 웹개발
+C#,자바 - ASP,PHP,ASP.NET,JSP - 모델2(MVC) 
+          - 프레임워크(스프링 프레임워크,전자정부표준프레임워크)
+      - 안드로이드앱개발 
+자바스크립트 -  jQuery
+데이터베이스 (오라클,Mysql,...)
+웹표준 - HTML,CSS
+직업기초
+빅데이터 - 수집,분석,시각화 -> 모델링,추론
+1~3개월 개인프로젝트(포트폴리오)
+4~6개월 팀프로젝트(포트폴리오)
+
+빅데이터 서버 프로그램 구현
+요구사항 확인 - 서버프로그램 구현 -  인터페이스 구현
+- 통합구현 - 데이터 입출력 구현 
+빅데이터 수집 분석
+
+자바스크립트 - JSP - jQuery - 파이썬,R
+                                     - 스프링프레임워크
+
+정적웹프로그램 - html,css,자바스크립트,jQuery
+동적웹프로그램 - asp,php,ASP.NET,JSP
+
+JSP (Java Server Page)
+1. JDK  jdk1.8.0_251 설치
+환경설정 - 컴퓨터 시스템에게 jdk설치 했다고 경로 알려줌
+내PC - 오른쪽버튼 - 속성 - 고급시스템설정 - 고급 -
+ 환경변수 - 시스템변수 - path - 편집
+새로만들기 - 
+C:\Program Files\Java\jdk1.8.0_251\bin
+
+자바실행환경
+환경변수 - 시스템변수 - 새로만들기
+변수이름:CLASSPATH
+변수값: 
+.;C:\Program Files\Java\jdk1.8.0_251\lib\tools.jar
+
+JDK설치확인
+윈도우 - 오른쪽버튼 - 실행 - cmd
+java -version
+javac -version
+
+
+2. 웹Server(웹애플리케이션서버)
+아파치톰캣  8.0버전
+http://tomcat.apache.org/
+
+시작 - 오른쪽버튼 - 실행 - \\192.168.5.200
+설치
+apache-tomcat-8.0.44
+
+웹서버 웹서비스 start
+
+사용자 웹브라우저 http://localhost:8080/
+
+서비스 되는 파일의 위치
+C:\Program Files\Apache Software Foundation\
+Tomcat 8.0\webapps\ROOT
+test1.html
+test2.jsp
+
+사용자 웹브라우저 http://localhost:8080/index.jsp
+사용자 웹브라우저 http://localhost:8080/test1.html
+사용자 웹브라우저 http://localhost:8080/test2.jsp
+사용자 웹브라우저 http://127.0.0.1:8080/test2.jsp
+
+자기 컴퓨터가 인터넷을 할수 있는 고유의 번호 부여
+cmd
+ipconfig
+사용자 웹브라우저 
+http://192.168.5.200:8080/test2.jsp
+제어판\시스템 및 보안\Windows Defender 방화벽
+\설정 사용자 지정
+방화벽 사용 안함
+http://192.168.5.2:8080/test2.jsp
+
+서버 jsp => 응답 java ( 출력 html) 위치
+C:\Program Files\Apache Software Foundation\
+Tomcat 8.0\work\Catalina\localhost\ROOT
+\org\apache\jsp
+자바파일                  index_jsp.java
+자바번역한 실행 파일 index_jsp.class
+자바파일                 test2_jsp.java
+자바번역한 실행 파일 test2_jsp.class
+
+3. 데이터베이스 서버
+
+4. 개발툴(이클립스)
+- 환경설정 - 한글utf-8설정
+=>Window - Preferences
+General - Workspace - Text file encoding
+Other -UTF-8
+=>Web - CSS Files, HTML Files,JSP File
+- ISO 10646/Unicode(UTF-8)
+
+- 웹서버 가져와서 가상으로 동작
+=> 실제 웹서버 stop
+C:\Program Files\Apache Software Foundation\
+Tomcat 8.0\bin
+Tomcat8w - 서버 stop
+=> File - New - Other - Server Server
+Apache - Tomcat 8.0
+C:\Program Files\Apache Software Foundation\Tomcat 8.0
+
+- 프로젝트 만들기
+=> File - New - Other -Web
+Dynamic Web Project
+프로젝트 이름 StudyJSP
+
+- 웹서버와 프로젝트 연결
+Servers - Add Remove - 연결
+
+1. Javascript - 화면 제어
+- 변수
+- 함수
+- 객체  웹 브라우저 제어하는 객체
+
+2. JSP - 화면 내용가져오기 - 데이터베이스 연결 저장
+1) <%  %>,  <%=  %>, <%@ %> , <%! %>
+2) 내장객체 (request, response, session,...)
+3) 액션태그 foward,include,..
+4) 세션(session) , 쿠키
+5) 데이터베이스 연결 - 회원가입, 로그인, 게시판,...
+6) 자바빈, 자바데이터베이스작업파일 - 회원가입, 로그인, 게시판,...
+=> 웹사이트 만들기  - 개인 프로젝트(포트폴리오,구두발표)
+7) MVC - 팀프로젝트
+8) 스프링 프레임워크(전자정부 표준프레임워크) -개인 프로젝트
+
+
+사용자 웹브라우저 http://localhost:8080/StudyJSP/js3/test7.html 서버 요청
+http 요청정보를 들고 서버 찾아가기 test7.html요청
+웹서버  - test7.html 요청페이지를 찾아서 http보내는 작업 => http => 사용자 응답
+
+
+사용자 웹브라우저 http://localhost:8080/StudyJSP/js3/a.jsp 서버 요청
+http 요청정보를 들고 서버 찾아가기 a.jsp 요청
+웹서버(아파치) - a.jsp요청페이지를 찾아서 보니 처리 작업 필요
+웹애플리케이션서버(톰캣) -  a.jsp 페이지  처리해서 .java(html출력) 응답정보 
+=> 웹서버 .java(html출력) => http => 사용자 응답
+
+사용자 웹브라우저 http://localhost:8080/StudyJSP/js3/a.jsp 서버 요청
+http 요청정보(파라미터정보)를 들고 서버 찾아가기 a.jsp 요청
+웹서버(아파치) - a.jsp요청페이지를 찾아서 보니 처리 작업 필요
+웹애플리케이션서버(톰캣,WAS,웹컨테이너,컨테이너) 
+- request 요청정보저장 ,response 응답정보저장 내장객체 기억장소 할당(객체생성) 
+- web.xml 파일 참조(설정 정보)
+- 서블릿 내장객체(처리담당자) 없으면 기억장소 할당(객체생성) , 초기값 할당
+                 있으면 서블릿 스레드 생성(복제,동시작업)
+- 서블릿동작: 자동으로 호출 service(), doGet(), doPost() 메서드 호출하면서 처리작업
+-  a.jsp 페이지  처리해서 .java(html출력) 응답정보 - response 응답정보 저장
+=> 웹서버 response(.java(html출력)) 전달  => http => 사용자 응답
+=> 서블릿 스레드, request,response 소멸
+
+HTTP : 요청 응답 html 문서를 전송 시키는 프로토콜(통신규약)
+FTP : 파일을 전송 시키는 프로토콜
+SMTP : 메일 전송 시키는 프로토콜
+
+
+3. 데이터베이스 서버(데이터베이스관리시스템 DBMS) 설치
+=> 오라클, MS-SQL, Mysql,...
+www.mysql.com
+
+Downloads
+MySQL Community Server
+
+Looking for previous GA versions? 
+
+MySQL Community Server 5.7.30 
+MySQL Installer 5.7.30 
+Windows (x86, 32-bit), MSI Installer 5.7.30 24.4M 
+ No thanks, just start my download.
+
+MySQL 설치 후 환경설정
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin
+mysql.exe
+
+내PC - 오른쪽버튼 - 속성 - 고급시스템설정 - 고급 -
+ 환경변수 - 시스템변수 - path - 편집
+새로만들기 - 
+C:\Program Files\MySQL\MySQL Server 5.7\bin
+
+cmd
+mysql -u root -p
+1234
+
+
+쇼핑몰 사이트
+쇼핑몰 프로젝트 전체를 저장할 공간 만들기 : 데이터베이스 생성
+쇼핑몰 데이터베이스를 관리할 사용자 만들기 : 사용자 만들고 권한부여
+쇼핑몰 데이터베이스안에 주제별로 저장할 공간 만들기 : 회원테이블 생성
+
+
+데이터베이스를 관리하는 명령(SQL)
+저장공간 만들고, 수정, 삭제 : 정의어(DDL) - create,alter,drop
+사용자 만들고 권한 부여, 해제 : 제어어(DCL) - grant, revoke
+저장공간안에 데이터 입력,수정,삭제,조회 : 조작어(DML) - insert, update, delete, select
+ 
+전체를 저장할 공간 (데이터베이스) 조회
+show databases;
+전체를 저장할 공간 (데이터베이스) 만들기
+create database jspdb5;
+
+데이터베이스 하나 선택
+use jspdb5;
+
+주제별로 저장할 공간(테이블) 조회
+show tables;
+
+주제별로 저장할 공간(테이블) 만들기
+create table student(
+     num int,
+     name varchar(10)
+);
+
+주제별로 저장할 공간(테이블) 구조보기
+desc student;
+
+테이블안에 저장된 학생정보 조회
+select 열이름,열이름2 from 테이블이름 
+select * from 테이블이름 
+
+select num,name from student;
+select * from student;
+
+
+테이블안에 저장된 학생정보 입력
+insert into 테이블이름(열이름,열이름2) values(값,값2)
+insert into student(num,name) values(1,'kimgildong');
+
+student테이블에 num열 2 , name열 'leegildong' 학생정보 입력
+insert into student(num,name) values(2,'leegildong');
+insert into student values(2,'leegildong');
+
+insert into student(num) values(3);
+insert into student(name) values('jung');
+
+insert into student(num,name) values(2,'leegildong');
+insert into student(num,name) values(2,'leegildong');
+
+데이터베이스 한글처리
+데이터베이스 정보 확인
+status
+Server characterset:    latin1
+Db     characterset:    latin1
+변경
+Server characterset:    utf8
+Db     characterset:    utf8
+
+데이터베이스 환경변수 파일=> 한글 utf8
+
+C:\ProgramData\MySQL\MySQL Server 5.7
+my.ini
+바탕화면에 복사해서 수정 => 원위치 붙여넣기
+
+my.ini  99라인 수정
+character-set-server=utf8
+
+데이터베이스 restart
+
+cmd
+mysql -u root -p
+1234
+
+status
+
+데이터베이스 하나 선택
+use jspdb5;
+
+status
+
+전체를 저장할 공간 (데이터베이스) 삭제
+drop database jspdb5;
+전체를 저장할 공간 (데이터베이스) 조회
+show databases;
+전체를 저장할 공간 (데이터베이스) 만들기
+create database jspdb5;
+
+데이터베이스 하나 선택
+use jspdb5;
+status
+
+주제별로 저장할 공간(테이블) 조회
+show tables;
+
+주제별로 저장할 공간(테이블) 만들기
+num  primary key 기본키로 설정=> 중복없이 NULL(비어있는것)없이
+
+create table student(
+     num int primary key,
+     name varchar(10)
+);
+
+테이블 구조 확인
+desc student;
+
+insert into student(num,name) values(1,'김길동');
+//중복된 num 1 에러발생
+//ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+insert into student(num,name) values(1,'김길동');
+
+// 열이름 생략하면 모든열에 데이터 순서대로 넣기
+insert into student values(2,'leegildong');
+
+테이블내용 조회
+select * from student;
+
+// name NULL가능
+insert into student(num) values(3);
+
+// num NULL 에러발생
+// ERROR 1364 (HY000): Field 'num' doesn't have a default value
+insert into student(name) values('jung');
+
+// 수정
+update 테이블이름 set 수정할열이름=수정할값,수정열=수정값 where 기준열=기준값
+
+// num가 3인 학생의 이름을 '홍길동' 변경
+update student set name='홍길동' where num=3;
+
+// num가 2인 학생의 이름을 '이길동' 변경
+update student set name='이길동' where num=2;
+
+// num가 3인 학생의 num을 5 변경, 이름을 '홍길순'
+update student set num=5, name='홍길순' where num=3;
+
+// 삭제 
+delete from 테이블이름 where 조건열=값
+
+// num가 5번인 학생을 삭제
+delete from student where num=5;
+
+// num 2번 이고 name '이길동' 학생 삭제  and 
+delete from student where num=2 and name='이길동';
+
+
+insert into student values(2,'홍길동');
+insert into student values(3,'이길동');
+
+// select 열이름,열이름 from 테이블이름
+select * from student;
+select num,name from student;
+select name from student;
+
+
+// select 열이름,열이름 from 테이블이름 where 조건열 =조건값
+// num=1인 학생 조회
+select * from student where num=1;
+
+// 이름이 '홍길동' 조회
+select * from student where name='홍길동';
+
+// 이름이 '길동'으로 끝나는 이름 조회
+select * from student where name like '%길동';
+
+// 게시판 글 제목 검색
+// select * from board where subject like '%검색어%';
+
+// 정렬 오름차순, 내림차순
+select * from 테이블이름 order by 기준열 asc/desc
+select * from 테이블이름 order by 기준열1 asc, 기준열2 desc
+
+insert into student values(5,'홍길동');
+insert into student values(4,'정길동');
+
+
+// 이름을 기준으로 오름차순
+select * from student order by name asc;
+
+// 이름을 기준으로 오름차순  이름이 동일한 학생이있으면 num 내림차순
+select * from student order by name asc, num desc;
+
+
+// 자바,JSP에서  데이터베이스 연동
+// 데이터베이스에서 언어별로 연결하는 프로그램 배포
+// mysql.com  다운
+https://www.mysql.com/downloads/
+MySQL Community (GPL) Downloads » 
+https://dev.mysql.com/downloads/connector/j/
+Looking for previous GA versions? 
+Connector/J 5.1.49 
+(mysql-connector-java-5.1.49.zip)
+No thanks, just start my download.
+압축풀기
+mysql-connector-java-5.1.49.jar
+
+// JDBC(Java DataBase Connectivity) 프로그램 설치
+WebContent - WEB-INF - lib - mysql-connector-java-5.1.49.jar
+1단계 JDBC프로그램안에 Driver프로그램 가져오기
+2단계 Driver프로그램을 이용해서 디비연결(디비주소,디비접속아이디,디비접속비밀번호) => 디비연결정보 저장
+3단계 디비연결정보를 이용해서 sql만들고 실행할수 있는 객체 생성
+4단계 sql 구문 실행(insert,update,delete)
+      sql 구문 실행 => 결과(select) => 결과 저장
+5단계 결과를 => 출력, 저장
+마무리 : 기억장소 정리
+
+
+쇼핑몰 사이트
+쇼핑몰 프로젝트 전체를 저장할 공간 만들기 : 데이터베이스 생성 jspdb5
+쇼핑몰 데이터베이스를 관리할 사용자 만들기 : 사용자 만들고 권한부여
+              사용자 jspid   비밀번호 jsppass
+쇼핑몰 데이터베이스안에 주제별로 저장할 공간 만들기 : 회원테이블 생성
+student, member, board
+
+
+회원테이블 member
+아이디 비밀번호 이름  나이 이메일 인증정보 주소 전화번호 가입날짜 주민번호 
+
+cmd
+mysql -u root -p
+1234
+
+use jspdb5
+
+create table member(
+     id varchar(20) primary key,
+     pass varchar(20),
+     name varchar(20),
+     reg_date datetime
+);
+
+desc member;
+
+
+//데이터베이스공간 jspdb5  관리할 사용자에게 권한 부여
+//아이디  jspid   비밀번호 jsppass
+
+//jspid가 localhost 접속해서 사용할때
+grant select,insert,update,delete,create,alter,drop 
+on jspdb5.* to 'jspid'@'localhost' 
+identified by 'jsppass';
+
+//jspid가 ip주소 192.168.5.200 % 접속해서 사용할때
+grant select,insert,update,delete,create,alter,drop 
+on jspdb5.* to 'jspid'@'%' 
+identified by 'jsppass';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
